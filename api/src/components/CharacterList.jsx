@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Grid, CircularProgress, Typography } from "@mui/material"; 
+import { Grid2, CircularProgress, Typography } from "@mui/material"; 
 import CharacterCard from "./CharacterCard";
 import CharacterModal from "./CharacterModal";
 
@@ -35,13 +35,13 @@ const CharacterList = () => {
       ) : (
         <>
      
-          <Grid container justifyContent="center" spacing={9}>
+          <Grid2 container justifyContent="center" spacing={9}>
             {characters.map((char) => (
-              <Grid item key={char.id}>
+              <Grid2   key={char.id}>
                 <CharacterCard character={char} onClick={handleOpen} />
-              </Grid>
+              </Grid2>
             ))}
-          </Grid>
+          </Grid2>
         </>
       )}
       <CharacterModal open={open} onClose={handleClose} character={selectedCharacter} />
